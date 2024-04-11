@@ -1,0 +1,23 @@
+{
+  "name": "reactify",
+  "version": "1.0.0",
+  "description": "Custom react library from scratch",
+  "main": "reactify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthakkapila/Reactify.git"
+  },
+  "keywords": [
+    "react",
+    "render"
+  ],
+  "author": "Sarthak Kapila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sarthakkapila/Reactify/issues"
+  },
+  "homepage": "https://github.com/sarthakkapila/Reactify#readme"
+}
