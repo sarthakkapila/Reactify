@@ -1,19 +1,22 @@
-function customRender(element) {
-    const domElement = document.createElement(element.type)
-    domElement.innerHTML = element.children
-
-    for (prop in element.props) {
-        if (prop == children ) continue;
-        domElement.setAtribute(prop, element.props[prop])
+function customRender(reactElement, container) {
+  const domElement = document.createElement(reactElement.type);
+  domElement.textContent = reactElement.children;
+  for (const prop in reactElement.props) {
+    if (prop !== 'children') {
+      domElement.setAttribute(prop, reactElement.props[prop]);
     }
-    container.appendChild(domElement);
+  }
+  container.appendChild(domElement);
 }
 
 const reactElement = {
-    type: 'a',
-    props: {
-        href: 'https://google.com',
-        target: '_blank'
-    },
-    children: "Hello go fuck yourself"
-}
+  type: 'a',
+  props: {
+    href: 'https://www.google.com',
+    target: '_blank'
+  },
+  children: 'Go fuck yourself bitch!'
+};
+
+const mainContainer = document.querySelector('#root');
+customRender(reactElement, mainContainer);
